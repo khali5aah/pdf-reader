@@ -265,20 +265,24 @@ class HomeScreen extends StatelessWidget {
             children: [
               const Text('Sort documents by', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
               const SizedBox(height: 16),
-              ...Constants.sortFields.map((field) {
-                return RadioListTile<String>(
-                  value: field,
-                  groupValue: pdfState.sortBy,
-                  title: Text(field, style: const TextStyle(color: Colors.white70)),
-                  activeColor: const Color(0xFF3F73FF),
-                  onChanged: (value) {
-                    if (value != null) {
-                      pdfState.setSortBy(value);
-                      Navigator.pop(context);
-                    }
-                  },
-                );
-              }).toList(),
+              RadioGroup<String>(
+                groupValue: pdfState.sortBy,
+                onChanged: (value) {
+                  if (value != null) {
+                    pdfState.setSortBy(value);
+                    Navigator.pop(context);
+                  }
+                },
+                child: Column(
+                  children: Constants.sortFields.map((field) {
+                    return RadioListTile<String>(
+                      value: field,
+                      title: Text(field, style: const TextStyle(color: Colors.white70)),
+                      activeColor: const Color(0xFF3F73FF),
+                    );
+                  }).toList(),
+                ),
+              ),
             ],
           ),
         );

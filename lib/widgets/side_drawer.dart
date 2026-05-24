@@ -14,11 +14,11 @@ class SideDrawer extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(22),
+            const Padding(
+              padding: EdgeInsets.all(22),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text('Neon Menu', style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w700)),
                   SizedBox(height: 6),
                   Text('Navigate and customize the experience', style: TextStyle(color: Colors.white54, fontSize: 12)),

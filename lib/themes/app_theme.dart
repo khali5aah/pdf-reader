@@ -14,8 +14,7 @@ class AppTheme {
     scaffoldBackgroundColor: background,
     primaryColor: neonBlue,
     useMaterial3: true,
-    colorScheme: ColorScheme.dark(
-      background: background,
+    colorScheme: const ColorScheme.dark(
       surface: surface,
       primary: neonBlue,
       secondary: neonPurple,

@@ -66,12 +66,12 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 18),
-                GlassCard(
+                const GlassCard(
                   child: Padding(
-                    padding: const EdgeInsets.all(20),
+                    padding: EdgeInsets.all(20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text('Support', style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700)),
                         SizedBox(height: 12),
                         Text('Use the drawer to open files and customize the app theme. Keep your library neon and sharp.', style: TextStyle(color: Colors.white54)),
