@@ -64,13 +64,15 @@ class FileService {
   }
 
   static Future<File?> pickPdfFile() async {
-    final result = await FilePicker.platform.pickFiles(
+    final result = await FilePicker.pickFiles(
       type: FileType.custom,
       allowedExtensions: ['pdf'],
       allowMultiple: false,
     );
-    if (result == null || result.files.isEmpty) return null;
-    final path = result.files.first.path;
+    if (result == null) return null;
+    final files = result.files;
+    if (files.isEmpty) return null;
+    final path = files.first.path;
     return path != null ? File(path) : null;
   }
 }

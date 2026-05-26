@@ -3,7 +3,7 @@ description: A cyberpunk-inspired futuristic PDF reader with advanced navigation
 publish_to: 'none'
 version: 1.0.0+1
 environment:
-  sdk: '>=2.19.0 <3.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -11,8 +11,8 @@ dependencies:
   cupertino_icons: ^1.0.5
   provider: ^6.0.5
   hive_flutter: ^1.1.0
-  permission_handler: ^11.0.3
-  file_picker: ^5.3.4
+  permission_handler: ^12.0.1
+  file_picker: ^11.0.2
   path_provider: ^2.0.18
   syncfusion_flutter_pdfviewer: ^33.2.7
 
